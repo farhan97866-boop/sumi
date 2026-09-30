@@ -1,0 +1,24 @@
+{
+  "overview": "Sumi is a single productivity hub bundling a calculator, currency converter, chess, carrom, Japanese karuta cards, Hiragana/Katakana/Kanji study, Chinese character study, and a notes app behind one responsive dashboard.",
+  "features": [
+    "Standard calculator with history and keyboard support",
+    "Live currency converter with swap and rate timestamps",
+    "Full legal-move chess with check, checkmate, and move history",
+    "Carrom board with striker physics and two-player scoring",
+    "Japanese karuta card practice with score and streaks",
+    "Hiragana, Katakana, and Kanji study charts and flashcards with saved progress",
+    "Chinese character reference and flashcards with saved progress",
+    "Rich-text notes with search, pinning, and per-user storage",
+    "Internet Identity sign-in with per-user notes and study progress",
+    "Light and dark theme with responsive collapsible navigation"
+  ],
+  "category": "productivity",
+  "tags": [
+    "productivity",
+    "games",
+    "language-learning",
+    "notes",
+    "utilities"
+  ],
+  "last_updated": "2026-09-27T13:15:48.658Z"
+}

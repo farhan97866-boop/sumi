@@ -1,0 +1,110 @@
+// Version: 4.0.0
+type AccessControlState__201339279 =
+  {
+    var adminAssigned : Bool;
+    userRoles : Map__230067015<Principal, UserRole__91647283>
+  };
+type ChineseProgress__161353322 =
+  {
+    character : Text;
+    key : Text;
+    learned : Bool;
+    owner : UserId__158757552;
+    updatedAt : Timestamp__301639476
+  };
+type ChineseProgress__186769164 =
+  {
+    character : Text;
+    key : Text;
+    learned : Bool;
+    owner : Principal;
+    updatedAt : Int
+  };
+type Data__44217153<K, V> = {var count : Nat__227979830; kvs : [var ?(K, V)]};
+type Internal__283199666<K, V> =
+  {children : [var ?Node__204828119<K, V>]; data : Data__44217153<K, V>};
+type JapaneseProgress__692606971 =
+  {
+    character : Text;
+    key : Text;
+    learned : Bool;
+    owner : Principal;
+    setId : Text;
+    updatedAt : Int
+  };
+type JapaneseProgress__907245285 =
+  {
+    character : Text;
+    key : Text;
+    learned : Bool;
+    owner : UserId__158757552;
+    setId : Text;
+    updatedAt : Timestamp__301639476
+  };
+type Leaf__598469445<K, V> = {data : Data__44217153<K, V>};
+type Map__230067015<K, V> = Map__405889023<K, V>;
+type Map__405889023<K, V> = Map__603270868<K, V>;
+type Map__603270868<K, V> =
+  {var root : Node__204828119<K, V>; var size : Nat__227979830};
+type Nat__227979830 = Nat__920180692;
+type Nat__920180692 = Nat;
+type NewActor__949499829 =
+  {
+    accessControlState : AccessControlState__201339279;
+    chineseProgress : Map__230067015<Text, ChineseProgress__186769164>;
+    japaneseProgress : Map__230067015<Text, JapaneseProgress__692606971>;
+    nextNoteId : {var value : Nat};
+    notes : Map__230067015<Nat, Note__117826100>
+  };
+type Node__204828119<K, V> =
+  {#internal : Internal__283199666<K, V>; #leaf : Leaf__598469445<K, V>};
+type Note__1063160515 =
+  {
+    body : Text;
+    createdAt : Timestamp__301639476;
+    id : Nat;
+    owner : UserId__158757552;
+    pinned : Bool;
+    title : Text;
+    updatedAt : Timestamp__301639476
+  };
+type Note__117826100 =
+  {
+    body : Text;
+    createdAt : Int;
+    id : Nat;
+    owner : Principal;
+    pinned : Bool;
+    title : Text;
+    updatedAt : Int
+  };
+type OldActor__263139629 = {};
+type Timestamp__301639476 = Int;
+type UserId__158757552 = Principal;
+type UserRole__91647283 = {#admin; #guest; #user};
+{
+  "20260927_000000" : OldActor__263139629 -> NewActor__949499829
+}
+actor  {
+  stable accessControlState :
+    {
+      var adminAssigned : Bool;
+      userRoles : Map__230067015<Principal, UserRole__91647283>
+    };
+  stable chineseProgress :
+    {
+      var root : Node__204828119<Text, ChineseProgress__161353322>;
+      var size : Nat__227979830
+    };
+  stable japaneseProgress :
+    {
+      var root : Node__204828119<Text, JapaneseProgress__907245285>;
+      var size : Nat__227979830
+    };
+  stable nextNoteId : {var value : Nat};
+  stable notes :
+    {
+      var root : Node__204828119<Nat, Note__1063160515>;
+      var size : Nat__227979830
+    }
+};
